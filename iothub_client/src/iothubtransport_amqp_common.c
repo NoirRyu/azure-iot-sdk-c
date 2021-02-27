@@ -2407,7 +2407,7 @@ void IoTHubTransport_AMQP_Common_Unregister(IOTHUB_DEVICE_HANDLE deviceHandle)
             else
             {
                 // bug:8781049
-                // stop the device and reset the pending messages before destorying the device instance
+                // stop the device and reset the pending messages before destroying the device instance
                 (void)amqp_device_stop(registered_device->device_handle);
                 prepare_for_connection_retry(registered_device->transport_instance);
 
